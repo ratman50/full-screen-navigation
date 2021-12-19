@@ -1,0 +1,96 @@
+*
+{
+    margin:0;
+    padding:0;
+    text-decoration:none;
+    border:none;
+    list-style: none;
+    outline:none;
+    box-sizing:border-box;
+}
+body
+{
+    /* height: 100vh;
+    width: 100vw; */
+}
+.nav
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 19;
+    background-color: rgba(0, 0, 0, .7);
+     height: 100vh;
+    width: 100vw;
+    transition: .7s linear;
+    clip-path: polygon(0 0, 0 100%,0 0, 0 0);
+}
+.nav_active
+{
+    clip-path: polygon(0 0, 0 100%,100% 100%, 100% 0);
+
+}
+.nav__button_close
+{
+    font-size: 2.5em;
+    background-color: transparent;
+    color: tomato;
+    position: absolute;
+    top:10%;
+    right: 20%;
+    cursor: pointer;
+}
+.nav__button_close:hover
+{
+    color: white;
+}
+.nav__menu
+{
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    /* transform: translate(50%,50%); */
+}
+.nav__item
+{
+    padding: .5em;
+    
+}
+.nav__link  
+{
+    font-size: 2em;
+    color: white;
+    position: relative;
+    text-align: center;
+}
+.nav__link::before
+{
+    display: block;
+    content: "";
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    left: 0;
+    transition: width .3s ease-in;
+}
+.nav__link:hover::before
+{
+    width: 100%;
+}
+
+.main__content
+{
+    position: relative;
+    padding: 2em;
+}
+.menuOpen
+{
+    position: absolute;
+    cursor: pointer;
+    top: 20px;
+    left:10px;
+    font-size: 1.2em;
+    background-color: transparent;
+}
